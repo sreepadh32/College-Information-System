@@ -1,33 +1,1033 @@
-    .department {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 2px solid black;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
+@font-face {
+  font-family: ocra;
+  src: url(images/fonts/OCRAEXT.TTF);
+}
 
-    .sub-heading {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+@font-face {
+  font-family: origami;
+  src: url(images/fonts/Origami.ttf);
+}
+@font-face {
+  font-family: nmr;
+  src: url(images/fonts/NeueMachina-Regular.otf);
+}
+@font-face {
+  font-family: racer;
+  src: url(images/fonts/racer.ttf);
+}
 
-    .profile {
-      display: flex;
-      flex-direction: row; /Change to row/
-      align-items: center;
-      margin-top: 20px;
-    }
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: racer;
+}
+html, body
+{
+overflow-x: hidden;
+}
+body{ background-image: url("images/csewallpaper.jpg");
+background-attachment: fixed;
+position: relative;
+}
 
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-right: 10px; /Add margin-right/
-    }
+h1{
+  font-size: 4.5rem;
+}
+h3{
+  font-size: 2.5rem;
+}
+hr{
 
-    .profile-name {
-      font-size: 16px;
-      font-weight: bold;
-    }
+}
+
+button{
+font-family: ocra;
+font-size: 1.15rem;
+}
+
+.mainsec{
+margin: 0px;
+width:100%;
+height: 350px;
+color: aliceblue;
+
+background-image: url("images/Workshopwebtop.png"), url("images/Workshopwebbottom.png"),url("images/Workshopweb.png");
+background-repeat: no-repeat, no-repeat,no-repeat;
+background-position:  center top,center bottom,center bottom;
+background-size: contain,contain,contain;
+backdrop-filter: blur(1.5px);
+padding: 5px 100px 100px;
+
+
+display: flex;
+flex-direction: column;
+justify-content: end;
+}
+
+.hollow{
+vertical-align: bottom;
+color: transparent;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.mainsec h1{
+
+display: inline-block;
+white-space: nowrap;
+overflow: hidden;
+  width: 0;
+animation: typing 2s steps(37) forwards ;
+
+}
+
+.mainsec h3{
+
+color: transparent;
+  -webkit-text-stroke-width: 0.025px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.mainsec span{
+font-size: 1rem;
+}
+
+.mainsec .textdiv{
+display: flex;
+  justify-content: center;
+}
+
+
+@keyframes typing {
+from {
+  width: 0;
+}
+to {
+  width: 100%;
+}
+}
+
+
+
+/*  Card */
+
+.cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+margin: 50px;
+}
+
+.card {
+  position: relative;
+  width:500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 50px;
+  transition: 0.4s;
+}
+
+.content {
+  z-index: 1;
+  position: relative;
+  left: 0;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(1.5px);
+  transition: 1s;
+  color: white;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(240, 248, 255, 0.484);
+  
+}
+
+.card:hover .content {
+  box-sizing: content-box;
+  box-shadow: -8px 8px 0 0 #CCF62A; 
+  transform: translate(8px, -8px);
+  transition-duration: 0.25s;
+
+ 
+}
+
+.card h2 {
+  font-size: 1.9em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 0 30px;
+}
+.card h4{
+font-size: 2rem;
+display: inline-block;
+padding-left: 40px;
+padding-top: 10px;
+font-family: origami;
+letter-spacing: 2.5px;
+}
+
+.card p {
+  font-size: 0.95em;
+  font-weight: 300;
+  margin-bottom: 20px;
+   padding: 0 30px;
+ visibility:hidden;
+
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #222;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 10px;
+  margin:0 30px 30px;
+  border-radius: 5px;
+}
+
+
+
+.card img.poster{
+  width:100%;
+  border-radius:20px 20px 0 0;
+border-bottom:1.5px solid white;
+  
+}
+
+.card img.arrow{
+display: inline-block;
+height: 30px;
+width: 30px;
+float: right;
+margin:15px;
+transition: transform .4s ease-in-out, padding 0.4s ease-in-out; 
+}
+
+.card:hover img.arrow{
+transform: rotate(-45deg);
+padding: 2px;
+
+}
+.card:hover p{
+visibility: visible;
+}
+.cardbottom{
+display: block;
+height:60px;
+}
+
+.cardbottom span{
+font-family: origami;
+font-size: 2rem;
+animation-name: rainbow;
+animation-duration: 1s;
+
+animation-delay: s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+
+@keyframes rainbow {
+0% {
+  color:#ffffff;
+}
+
+100% {
+  color:#CCF62A;
+}
+}
+
+
+
+/* card */
+
+/*Glitch*/
+.hero {
+font-size: 4.5rem;
+line-height: 1;
+display: inline-block;
+color: #fff;
+z-index: 2;
+letter-spacing: 0px;
+
+/* Bright things in dark environments usually cast that light, giving off a glow */
+filter: drop-shadow(0 1px 2px);
+}
+
+
+
+.layers {
+position: relative;
+}
+
+.layers::before,
+.layers::after {
+content: attr(data-text);
+position: absolute;
+width: 110%;
+z-index: -1;
+}
+
+.layers::before {
+top: 10px;
+left: 15px;
+color: #e0287d;
+}
+
+.layers::after {
+top: 5px;
+left: -10px;
+color: #1bc7fb;
+}
+
+
+@keyframes paths {
+0% {
+  clip-path: polygon(0% 43%, 83% 43%, 83% 22%, 23% 22%, 23% 24%, 91% 24%, 91% 26%, 18% 26%, 18% 83%, 27.5% 72%, 29% 17%, 41% 17%, 41% 39%, 18% 39%, 18% 82%, 19% 4%, 39% 4%, 39% 14%, 76% 14%, 76% 52%, 23% 52%, 23% 35%, 19% 35%, 19% 8%, 36% 8%, 36% 31%, 73% 31%, 73% 16%, 1% 16%, 1% 56%, 50% 56%, 50% 8%);
+}
+
+5% {
+  clip-path: polygon(
+  0% 29%,
+  44% 29%,
+  44% 83%,
+  94% 83%,
+  94% 56%,
+  11% 56%,
+  11% 64%,
+  94% 64%,
+  94% 70%,
+  88% 70%,
+  88% 32%,
+  18% 32%,
+  18% 96%,
+  10% 96%,
+  10% 62%,
+  9% 62%,
+  9% 84%,
+  68% 84%,
+  68% 50%,
+  52% 50%,
+  52% 55%,
+  35% 55%,
+  35% 87%,
+  25% 87%,
+  25% 39%,
+  15% 39%,
+  15% 88%,
+  52% 88%
+  );
+}
+
+30% {
+  clip-path: polygon(
+  0% 53%,
+  93% 53%,
+  93% 62%,
+  68% 62%,
+  68% 37%,
+  97% 37%,
+  97% 89%,
+  13% 89%,
+  13% 45%,
+  51% 45%,
+  51% 88%,
+  17% 88%,
+  17% 54%,
+  81% 54%,
+  81% 75%,
+  79% 75%,
+  79% 76%,
+  38% 76%,
+  38% 28%,
+  61% 28%,
+  61% 12%,
+  55% 12%,
+  55% 62%,
+  68% 62%,
+  68% 51%,
+  0% 51%,
+  0% 92%,
+  63% 92%,
+  63% 4%,
+  65% 4%
+  );
+}
+
+45% {
+  clip-path: polygon(
+  0% 33%,
+  2% 33%,
+  2% 69%,
+  58% 69%,
+  58% 94%,
+  55% 94%,
+  55% 25%,
+  33% 25%,
+  33% 85%,
+  16% 85%,
+  16% 19%,
+  5% 19%,
+  5% 20%,
+  79% 20%,
+  79% 96%,
+  93% 96%,
+  93% 50%,
+  5% 50%,
+  5% 74%,
+  55% 74%,
+  55% 57%,
+  96% 57%,
+  96% 59%,
+  87% 59%,
+  87% 65%,
+  82% 65%,
+  82% 39%,
+  63% 39%,
+  63% 92%,
+  4% 92%,
+  4% 36%,
+  24% 36%,
+  24% 70%,
+  1% 70%,
+  1% 43%,
+  15% 43%,
+  15% 28%,
+  23% 28%,
+  23% 71%,
+  90% 71%,
+  90% 86%,
+  97% 86%,
+  97% 1%,
+  60% 1%,
+  60% 67%,
+  71% 67%,
+  71% 91%,
+  17% 91%,
+  17% 14%,
+  39% 14%,
+  39% 30%,
+  58% 30%,
+  58% 11%,
+  52% 11%,
+  52% 83%,
+  68% 83%
+  );
+}
+
+76% {
+  clip-path: polygon(
+  0% 26%,
+  15% 26%,
+  15% 73%,
+  72% 73%,
+  72% 70%,
+  77% 70%,
+  77% 75%,
+  8% 75%,
+  8% 42%,
+  4% 42%,
+  4% 61%,
+  17% 61%,
+  17% 12%,
+  26% 12%,
+  26% 63%,
+  73% 63%,
+  73% 43%,
+  90% 43%,
+  90% 67%,
+  50% 67%,
+  50% 41%,
+  42% 41%,
+  42% 46%,
+  50% 46%,
+  50% 84%,
+  96% 84%,
+  96% 78%,
+  49% 78%,
+  49% 25%,
+  63% 25%,
+  63% 14%
+  );
+}
+
+90% {
+  clip-path: polygon(
+  0% 41%,
+  13% 41%,
+  13% 6%,
+  87% 6%,
+  87% 93%,
+  10% 93%,
+  10% 13%,
+  89% 13%,
+  89% 6%,
+  3% 6%,
+  3% 8%,
+  16% 8%,
+  16% 79%,
+  0% 79%,
+  0% 99%,
+  92% 99%,
+  92% 90%,
+  5% 90%,
+  5% 60%,
+  0% 60%,
+  0% 48%,
+  89% 48%,
+  89% 13%,
+  80% 13%,
+  80% 43%,
+  95% 43%,
+  95% 19%,
+  80% 19%,
+  80% 85%,
+  38% 85%,
+  38% 62%
+  );
+}
+
+1%,
+7%,
+33%,
+47%,
+78%,
+93% {
+  clip-path: none;
+}
+}
+
+@keyframes movement {
+0% {
+  top: 0px;
+  left: -20px;
+}
+
+15% {
+  top: 10px;
+  left: 10px;
+}
+
+60% {
+  top: 5px;
+  left: -10px;
+}
+
+75% {
+  top: -5px;
+  left: 20px;
+}
+
+100% {
+  top: 10px;
+  left: 5px;
+}
+}
+
+
+@keyframes opacity {
+0% {
+  opacity: 0.1;
+}
+
+5% {
+  opacity: 0.7;
+}
+
+30% {
+  opacity: 0.4;
+}
+
+45% {
+  opacity: 0.6;
+}
+
+76% {
+  opacity: 0.4;
+}
+
+90% {
+  opacity: 0.8;
+}
+
+1%,
+7%,
+33%,
+47%,
+78%,
+93% {
+  opacity: 0;
+}
+}
+
+.glitch span {
+display: inline-block;
+white-space: nowrap;
+overflow: hidden;
+height:fit-content;
+  width: 0;
+animation: typing 2s steps(37) forwards, paths 5s step-end infinite;
+font-family: racer;
+}
+.glitch h2{
+font-family: racer;
+}
+
+.glitch::before {
+animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+  font 8s step-end infinite, movement 10s step-end infinite;
+}
+
+.glitch::after {
+animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+  font 7s step-end infinite, movement 8s step-end infinite;
+}
+
+/*Glitch*/
+
+
+/*Modals*/
+
+.modal {
+display: none; /* Hidden by default */
+justify-content: center;
+position: fixed; /* Stay in place */
+z-index: 10; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+-webkit-animation-name: fadeIn; /* Fade in the background */
+-webkit-animation-duration: 0.4s;
+animation-name: fadeIn;
+animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+position: fixed;
+top: 75px;
+background-color:transparent;
+width: 90%;
+-webkit-animation-name: slideIn;
+-webkit-animation-duration: 0.4s;
+animation-name: slideIn;
+animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+color: black;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+from {top: -300px; opacity: 0} 
+to {top:100px; opacity: 1}
+}
+
+@keyframes slideIn {
+from {top: -300px; opacity: 0}
+to {top:100px; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+@keyframes fadeIn {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+
+/*Modals*/
+
+
+
+/* popup */
+
+.popcard {
+  display:flex;
+  width: 90%;
+  margin: 5%;
+  border-radius: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.card:target {
+display: flex;
+position: absolute;
+}
+
+.popcol1{
+flex-basis: 40%; 
+position: relative;
+
+
+}
+.popcol2{
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(2px);
+flex-basis: 60%; 
+color: white; 
+padding: 20px; 
+position: relative;
+padding: 5% 3%;
+border-radius: 20px;
+border: 4.5px solid white;
+margin-left: -3px;
+
+
+}
+.popimg{
+position: absolute; 
+top: 0; 
+left: 0; 
+bottom: 0; 
+right: 0; 
+width: 100%; 
+height: 100%;
+border-radius: 20px;
+border: 5px solid white;
+
+}
+
+.popbtndiv{
+display: flex;
+justify-content: flex-end;
+  align-items: flex-end;
+bottom: 0; 
+right: 0;
+margin-right: 20px;
+margin-bottom: 10px;
+
+width: 100%;
+position: absolute;
+bottom: 25px;
+}
+.popbtn1{
+background-color: rgba(255, 255, 255, 0); 
+color: rgb(255, 255, 255); 
+padding: 10px 20px; 
+height: 50px;
+width: 155px;
+border-radius: 5px;
+border: 1px solid white;
+
+
+}
+
+.popbtn1:hover{
+color: #ffffff;
+background-color: red;
+box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.31) inset,-3px 3px 2px 2px #4a4a4a; 
+  transform: translate(-2px, 2px);
+  transition-duration: 0.25s;
+}
+
+.popbtn2{
+background-color: #cdf62a; 
+color: rgb(0, 0, 0); 
+padding: 10px 20px; 
+border-radius: 5px;
+height: 50px;
+width: 175px;
+margin: 0px 20px;
+border: 1px solid black;
+}
+
+.popbtn2:hover{
+color: rgb(70, 70, 70);
+  box-shadow: -5px 5px 1px 1px #4a4a4a; 
+  transform: translate(5px, -5px);
+  transition-duration: 0.25s;
+}
+.popcol2 h2{
+font-size: 3.7rem;
+margin-bottom: 25px;
+}
+
+.popcol2 p{
+font-family: nmr;
+font-size: 1.2rem;
+
+}
+.hidres{
+display: none;
+}
+
+
+/* button selectors*/
+.filterDiv {
+
+display: none;
+}
+#myBtnContainer{
+  display:flex;
+  width:100%;
+  min-height:50px;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding: 0 7.5%;
+  column-gap: 15px;
+  justify-content: center;
+  margin: 55px 0 0;
+}
+
+.show {
+display: block;
+}
+
+.container {
+display: flex;
+
+margin-top: 20px;
+align-items: center;
+  flex-wrap: wrap;
+margin: 50px;
+  justify-content: center;
+  
+  
+}
+
+/* Style the buttons */
+.btn {
+display: block;
+cursor: pointer;
+background-color: transparent;
+color: rgb(255, 255, 255);
+backdrop-filter: blur(2px);
+padding: 10px; 
+border-radius: 5px;
+min-height: 50px;
+width: 175px;
+margin:10px 5px;
+border: 1px solid rgb(255, 255, 255);
+}
+
+.btn:hover {
+  box-shadow: -5px 5px 3px 3px #cdf62a; 
+  transform: translate(5px, -5px);
+  transition-duration: 0.25s;
+}
+
+.btn.active {
+background-color: #cdf62a; 
+color: black;
+box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.31) inset,-3px 3px 1.5px 1.5px rgba(255, 255, 255, 0.25); 
+border: 1px solid rgb(0, 0, 0);
+  
+}
+
+.btn.active:hover {
+transform: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+.card{
+  width:95%;
+}
+
+.cardbottom{
+height:40px;
+}
+.cardcontainer{
+margin:20px;
+}
+
+.btn{
+padding: 0px;
+height: 40px;
+margin:5px;
+width:125px;
+}
+
+.filterDiv {
+margin: 0px !important;
+padding: 0px !important;
+}
+.card h4{
+font-size: 1.5rem;
+display: inline-block;
+padding-left: 10px;
+padding-top: 10px;
+
+}
+.card{
+margin:15px 0;
+}
+.card img.arrow {
+  height: 20px;
+  width: 20px;
+  margin: 7px 15px 0 0;
+  }
+
+.card h4 {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.cardbottom span {
+  font-size: 1.5rem;
+}
+
+.mainsec .textdiv{
+  width:90%;
+  justify-content: flex-start;
+}
+
+.textdiv span{
+  width:100%;
+  font-size: 3rem;
+  float: left;
+  
+}
+
+.textdiv h2{
+  font-size: 2rem;
+}
+.mainsec{
+  padding: 0 0 100px 20px;
+  background-position:  center top,center bottom,10% 85% ;
+  background-size: 100%,100%,175%;
+  height: 33vh;
+}
+
+
+.popcard {
+  display:block;
+  margin: 5% 5% 40%;
+  border-radius: 20px;
+  
+}
+
+
+.popcol1{
+  width: 100%;
+  display: block;
+  
+  
+}
+.popcol2{
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  
+  color: white; 
+  padding: 20px; 
+  position: relative;
+  padding: 7% 5%;
+  border-radius: 20px;
+  border: 4.5px solid white;
+  margin-left: -3px;
+  
+
+}
+
+.popimg{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; 
+  width: 100%; 
+  height: 100%;
+  border-radius: 20px;
+  border: 5px solid white;
+  
+}
+
+.popbtndiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  gap: 10px;
+  height:120px;
+}
+
+.popbtn1{
+  background-color: rgba(255, 255, 255, 0); 
+  color: rgb(255, 255, 255); 
+  padding: 10px 20px; 
+  height: 50px;
+  width: 275px;
+  border-radius: 5px;
+  border: 1px solid white;
+  
+
+}
+
+.popbtn1:hover{
+  color: #ffffff;
+  background-color: red;
+  box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.31) inset,-3px 3px 3px 3px rgba(0, 0, 0, 0.31); 
+  transform: translate(-2px, 2px);
+  transition-duration: 0.25s;
+}
+
+.popbtn2{
+  background-color: #cdf62a; 
+  color: rgb(0, 0, 0); 
+  padding: 10px 20px; 
+  border-radius: 5px;
+  height: 50px;
+  width: 275px;
+  margin: 0px 20px;
+  border: 1px solid black;
+}
+
+.popbtn2:hover{
+  color: rgb(70, 70, 70);
+  box-shadow: -5px 5px 1px 1px #000000; 
+  transform: translate(5px, -5px);
+  transition-duration: 0.25s;
+}
+.popcol2 h2{
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.popcol2 p{
+  font-family: nmr;
+  font-size: 1.75vh;
+
+}
+
+.hidres{
+  display: block;
+}
+
+}
+
+/* button selectors*/

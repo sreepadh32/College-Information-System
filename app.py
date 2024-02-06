@@ -29,9 +29,9 @@ department = {
 def home():
     return render_template("index.html" )
 
-@app.route("/Faculty")
+@app.route("/faculty")
 def Faculty():
-    return render_template("Faculty.html", department=department)
+    return render_template("faculty.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
