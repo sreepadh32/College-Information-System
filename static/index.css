@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    overflow: visible;
 }
 
 body, html {
@@ -29,7 +30,7 @@ h2 {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 27vw 46vw 27vw;
-    gap: 1px BLACK;
+    gap:  5px;
 
 }
 
