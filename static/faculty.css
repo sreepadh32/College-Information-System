@@ -38,9 +38,7 @@ h1{
 h3{
   font-size: 2.5rem;
 }
-hr{
 
-}
 
 button{
 font-family: ocra;
@@ -110,6 +108,19 @@ to {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  Card */
 
 .cardcontainer {
@@ -156,6 +167,31 @@ margin: 50px;
  
 }
 
+
+/* id card*/
+.id-card {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  flex: 1;
+  padding: 10px;
+}
+.photo {
+  height: 100%;
+
+}
+.details {
+  flex: 3;
+  padding-left: 10px;
+}
+.details p {
+  margin: 0;
+  line-height: 1.5;
+}
+/* id card*/
+
+
 .card h2 {
   font-size: 1.9em;
   margin-top: 15px;
@@ -163,21 +199,18 @@ margin: 50px;
   padding: 0 30px;
 }
 .card h4{
-font-size: 2rem;
+font-size: 1.2rem;
 display: inline-block;
-padding-left: 40px;
-padding-top: 10px;
-font-family: origami;
-letter-spacing: 2.5px;
+font-family: nmr;
+margin-left: auto;
+margin-right: auto;
+padding: 0 10px;
 }
 
 .card p {
-  font-size: 0.95em;
-  font-weight: 300;
-  margin-bottom: 20px;
-   padding: 0 30px;
- visibility:hidden;
-
+  font-size: 1rem;
+  font-family: nmr;
+  padding: 0 10px;
 }
 
 .card a {
@@ -195,18 +228,20 @@ letter-spacing: 2.5px;
 
 
 .card img.poster{
-  width:100%;
-  border-radius:20px 20px 0 0;
+
+ width: 100%;
+border-radius:20px;
 border-bottom:1.5px solid white;
   
 }
 
 .card img.arrow{
 display: inline-block;
-height: 30px;
-width: 30px;
-float: right;
-margin:15px;
+height: 17px;
+width: 17px;
+position: absolute;
+bottom: 10px;
+right: 10px;
 transition: transform .4s ease-in-out, padding 0.4s ease-in-out; 
 }
 
@@ -215,12 +250,11 @@ transform: rotate(-45deg);
 padding: 2px;
 
 }
-.card:hover p{
-visibility: visible;
-}
+
 .cardbottom{
 display: block;
-height:60px;
+padding: 0 50px 10px 0;
+
 }
 
 .cardbottom span{
@@ -244,10 +278,18 @@ animation-direction: alternate;
   color:#CCF62A;
 }
 }
-
-
-
 /* card */
+
+
+
+
+
+
+
+
+
+
+
 
 /*Glitch*/
 .hero {
