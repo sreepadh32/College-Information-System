@@ -33,5 +33,9 @@ def home():
 def Faculty():
     return render_template("faculty.html")
 
+@app.route("/students")
+def Students():
+    return render_template("students.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

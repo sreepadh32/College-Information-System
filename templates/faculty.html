@@ -22,65 +22,18 @@
     </div>
 
     <!-- cards-->
-    
     <div class="container">
-
-      
-      <div onclick="openPopup('m1')" class="card ">
-        <div class="content ">
-          <div class="id-card">
-            <div class="column photo">
-                <img src="../static/images/1.jpg">
-            </div>
-            <div class="column details">
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>DOB:</strong> January 1, 1990</p>
-                <p><strong>ID:</strong> 1234567890</p>
-                <p><strong>Expires:</strong> January 1, 2025</p>
-                <p><strong>Issued By:</strong> Government Agency</p>
-            </div>
-        </div>
+    <div onclick="openPopup('m1')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/1.jpg">
+        <div class="cardbottom">
+          <h4>Dr.Naveena A K</h4>
+          <p>Asso.Professor PhD & HoD</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
         </div>
       </div>
-
-      <div onclick="openPopup('m2')" class="card a">
-        <div class="content">
-          <img class="poster" src="../static/images/1.jpg">
-          <div class="cardbottom">
-            <h4>Dr. Naveena A K</h4>
-            <p>Asso.Professor PhD & HoD</p>
-            <img class="arrow" src="../static/images/arrow.svg";>
-          </div>
-        </div>
-      </div>
-
-      <div onclick="openPopup('m2')" class="card a">
-        <div class="content">
-          <img class="poster" src="../static/images/posters/e2.jpg">
-          <div class="cardbottom">
-            <h4>Inqua <span>'23</span></h4>
-            <img class="arrow" src="../static/images/arrow.svg";>
-          </div>
-        </div>
-      </div>
-      
-
-      
-
-      
-
-      
-
-    
-      
     </div>
 
-
-
-
-
-
-    <!-- modals -->
 
     <div id="m1" class="modal">
       <!-- Modal content -->
@@ -88,24 +41,50 @@
         <div id="id01" class="popcard" >
           <div class="popcol1" ID="leftdiv"  >
             <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
-            <img class="popimg" src="./assets/posters/e1.jpg" alt="Placeholder image" style="">
+            <img class="popimg column photo" src="../static/images/1.jpg" alt="Placeholder image" >
           </div>
           <div class="popcol2" id="rightdiv">
-            <h2>CoDuo</h2>
             
-            <p>Team of 2 where participants compete as pairs. One starts the code and other finishes the code without prior knowledge of the initial code. Meaningful executable code will be declared most compatible coders.
-              <br>
-              <br>
-              Finish your partners code and show off your coding compatibility....</p>
-              <br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres">
+          <div class="column details">
+              <p><strong>Name:</strong> Dr.Naveena A K</p>
+              <p><strong>DOJ:</strong>04/12/2002</p>
+              <p><strong>E-Mail ID:</strong> naveenaak@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-9446440518</p>
+  <p><strong>Qualification:</strong> PhD in Computer Science from Kannur University</p>
+  <p><strong>Professional Experience: </strong> 23 Years</p>
+  <p><strong> Area of Interest: </strong> Image processing</p>
+          </div>
             <div class="popbtndiv">
               <button onclick="closePopup('m1')" class="popbtn1" >✖ Back</button>
-              <button class="popbtn2" >Register ➜</button>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div onclick="openPopup('m2')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/2.jpg">
+        <div class="cardbottom">
+          <h4>Sheena K</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
 
     <div id="m2" class="modal">
       <!-- Modal content -->
@@ -113,25 +92,990 @@
         <div id="id01" class="popcard" >
           <div class="popcol1" ID="leftdiv"  >
             <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
-            <img class="popimg" src="./assets/posters/e2.jpg" alt="Placeholder image" style="">
+            <img class="popimg column photo" src="../static/images/2.jpg" alt="Placeholder image" >
           </div>
           <div class="popcol2" id="rightdiv">
-            <h2>Blind Coding </h2>
             
-            <p>Your knack of writing simple code and passion to beat others by your programming skills can get you the champion...
-              <br>
-              <br>
-              Here each participant has to write the code for the given problem with the monitor off. The code with desired output will be declared winner. </p>
-              <br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres"><br class="hidres">
-            
+          <div class="column details">
+              <p><strong>Name:</strong> Sheena K</p>
+              <p><strong>DOJ:</strong> 01-07-2003</p>
+              <p><strong>E-Mail ID:</strong> sheenak@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-8606204099</p>
+  <p><strong>Qualification:</strong>  M E in Computer Science & Engineering</p>
+  <p><strong>Professional Experience: </strong> 13 Years</p>
+  <p><strong> Area of Interest: </strong> DBMS, Automata Languages, Operating Systems</p>
+          </div>
             <div class="popbtndiv">
               <button onclick="closePopup('m2')" class="popbtn1" >✖ Back</button>
-              <button class="popbtn2" >Register ➜</button>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m3')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/3.jpg">
+        <div class="cardbottom">
+          <h4>Rafeekh A P</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/3.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong> Rafeekh A P</p>
+              <p><strong>DOJ:</strong> 16-03-2005</p>
+              <p><strong>E-Mail ID:</strong> aprafeekhcet@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-9497382107</p>
+  <p><strong>Qualification:</strong>  M E in Computer Science & Information Science</p>
+  <p><strong>Professional Experience: </strong> 18 Years</p>
+  <p><strong> Area of Interest: </strong> Software Engineering, Computer Mathematics, Operating Systems</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m3')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m4')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/4.jpg">
+        <div class="cardbottom">
+          <h4>Huda Noordean</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m4" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/4.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong> Huda Noordean</p>
+              <p><strong>DOJ:</strong> 02-01-2019</p>
+              <p><strong>E-Mail ID:</strong> huda510@yahoo.com</p>
+              <p><strong>Mobile:</strong> +91-9497021630</p>
+  <p><strong>Qualification:</strong>  M E in Computer Science &  Engineering</p>
+  <p><strong>Professional Experience: </strong> 18 Years</p>
+  <p><strong> Area of Interest: </strong> Computer Networks, Machine Learning, Image Processing</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m4')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m5')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/5.jpg">
+        <div class="cardbottom">
+          <h4>Reejamol .K J </h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m5" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/5.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong> Reejamol .K J</p>
+              <p><strong>DOJ:</strong> 02-01-2010</p>
+              <p><strong>E-Mail ID:</strong>  reejaajo@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-8547212578</p>
+  <p><strong>Qualification:</strong>  M.Tech in Networks and Security,from Govt.Engineering College Wayanad</p>
+  <p><strong>Professional Experience: </strong> 17 Years</p>
+  <p><strong> Area of Interest: </strong> Wireless Adhoc Networks, Data Mining, Compiler Design</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m5')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m6')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/6.jpg">
+        <div class="cardbottom">
+          <h4>Sreeraj S </h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m6" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/6.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong> Sreeraj S</p>
+              <p><strong>DOJ:</strong>  30-05-2019</p>
+              <p><strong>E-Mail ID:</strong> mklmsreeraj@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-9947964740</p>
+  <p><strong>Qualification:</strong>  M.Tech </p>
+  <p><strong>Professional Experience: </strong> 17 Years</p>
+  <p><strong> Area of Interest: </strong> Wireless Adhoc Networks, Computer Networks, Theory of Computation</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m6')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div onclick="openPopup('m7')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/7.jpg">
+        <div class="cardbottom">
+          <h4>Santhosh S N </h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m7" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/7.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong> Santhosh S N</p>
+              <p><strong>DOJ:</strong>  01-07-2010</p>
+              <p><strong>E-Mail ID:</strong>santhosh@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-9947350156</p>
+  <p><strong>Qualification:</strong>  MTech Computer Science & Information Security</p>
+  <p><strong>Professional Experience: </strong> 8 Years</p>
+  <p><strong> Area of Interest: </strong> DBMS, Datastructures, Operating Systems, Cryptography</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m7')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m8')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/8.jpg">
+        <div class="cardbottom">
+          <h4>Anoop P V</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m8" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/8.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Anoop P V</p>
+              <p><strong>DOJ:</strong> 01-07-2011</p>
+              <p><strong>E-Mail ID:</strong>anooppv@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-9947106007</p>
+  <p><strong>Qualification:</strong> ME in Computer Science & Engineering from Anna University</p>
+  <p><strong>Professional Experience: </strong> 9 Years</p>
+  <p><strong> Area of Interest: </strong> Algorithm Design, Datastructures, Programming</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m8')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m9')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/9.jpg">
+        <div class="cardbottom">
+          <h4>Shabna Salam</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m9" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/9.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Shabna Salam</p>
+              <p><strong>DOJ:</strong>27-09-2013</p>
+              <p><strong>E-Mail ID:</strong>shabnasalam@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-9447897650</p>
+  <p><strong>Qualification:</strong>MTech in Computer and Information Science from Cochin University of Science and Technology</p>
+  <p><strong>Professional Experience: </strong> 9 Years</p>
+  <p><strong> Area of Interest: </strong> Computer Networks, Datastructures, Data Mining</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m9')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m10')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/10.jpg">
+        <div class="cardbottom">
+          <h4>Vijina P</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m10" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/10.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Vijina P</p>
+              <p><strong>DOJ:</strong>20-05-2022</p>
+              <p><strong>E-Mail ID:</strong>vijivijina666@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-9496988228</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science & Engineering from GEC Thrissur</p>
+  <p><strong> Area of Interest: </strong> Computer vision and Deep Learning</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m10')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+<div onclick="openPopup('m11')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/11.jpg">
+        <div class="cardbottom">
+          <h4>SHANA MUSTHAFA A P V</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m11" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/11.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>SHANA MUSTHAFA A P V</p>
+              <p><strong>DOJ:</strong>07-12-2021</p>
+              <p><strong>E-Mail ID:</strong>apvshana@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-9544794976</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science & Engineering</p>
+  <p><strong> Area of Interest: </strong> Automata Theory,Operating System</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m11')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m12')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/12.jpg">
+        <div class="cardbottom">
+          <h4>ANITHA M P</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m12" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/12.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>ANITHA M P</p>
+              <p><strong>DOJ:</strong>30-05-2022</p>
+              <p><strong>E-Mail ID:</strong>anithamp.mp@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-9496309911</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science & Engineering</p>
+  <p><strong>Professional Experience: </strong> 4 Years</p>
+  <p><strong> Area of Interest: </strong>Security in Computing</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m12')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m13')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/13.jpg">
+        <div class="cardbottom">
+          <h4>PRIYAMVADA R</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m13" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/13.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>PRIYAMVADA R</p>
+              <p><strong>DOJ:</strong>18-10-2022</p>
+              <p><strong>E-Mail ID:</strong>priyadamodaran777@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-8129292441</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science & Engineering</p>
+  <p><strong>Professional Experience: </strong> 5 Years</p>
+  <p><strong> Area of Interest: </strong>Image Processing , Network</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m13')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m14')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/14.jpg">
+        <div class="cardbottom">
+          <h4>ARCHANA K E</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m14" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/14.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>ARCHANA K E</p>
+              <p><strong>DOJ:</strong> 09/06/2023</p>
+              <p><strong>E-Mail ID:</strong>archanakizhakkemadam@gmail.com</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science & Engineering</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m14')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m15')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/15.jpg">
+        <div class="cardbottom">
+          <h4>Vivek R B</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m15" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/15.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Vivek R B</p>
+              <p><strong>DOJ:</strong> 04/09/2023</p>
+              <p><strong>E-Mail ID:</strong>mail.vivekrb@gmail.com</p>
+  <p><strong>Qualification:</strong>MTech in Computer & Information Science (CUSAT)</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m15')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m16')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/16.jpg">
+        <div class="cardbottom">
+          <h4>Fahma T P</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m16" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/16.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Fahma T P</p>
+              <p><strong>DOJ:</strong>18/09/2023</p>
+              <p><strong>E-Mail ID:</strong>fahmatp313@gmail.com</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m16')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m17')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/17.jpg">
+        <div class="cardbottom">
+          <h4>Aelekha Souparnika</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m17" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/17.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Aelekha Souparnika</p>
+              <p><strong>DOJ:</strong> 01/02/2024</p>
+              <p><strong>E-Mail ID:</strong>souparnika811@gmail.com</p>
+  <p><strong>Qualification:</strong>MTech in Computer Science</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m17')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div onclick="openPopup('m18')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/18.jpg">
+        <div class="cardbottom">
+          <h4>Shakkeel P.K</h4>
+          <p>Computer Pogrammer</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m18" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/19.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Shakkeel P.K</p>
+              <p><strong>DOJ:</strong> 01/08/2019</p>
+              <p><strong>E-Mail ID:</strong>shalpbt786@gmail.com</p>
+              <p><strong>Mobile:</strong> +91-954488217</p>
+  <p><strong>Qualification:</strong>B.Tech Computer Science & Engineering from CE Trikaripur</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m18')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+<div onclick="openPopup('m19')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/19.jpg">
+        <div class="cardbottom">
+          <h4>Devi P R</h4>
+          <p>Trade Instructor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m19" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/19.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Devi P R</p>
+       </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m19')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div onclick="openPopup('m20')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/20.jpg">
+        <div class="cardbottom">
+          <h4>Jeena M T</h4>
+          <p>Trade Instructor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m20" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/20.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Jeena M T</p>
+       </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m20')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+<div onclick="openPopup('m21')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/21.jpg">
+        <div class="cardbottom">
+          <h4>Sagar C Nambiar</h4>
+          <p>Technical Trainee</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m21" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/21.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Sagar C Nambiar</p>
+       </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m21')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div onclick="openPopup('m21')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/21.jpg">
+        <div class="cardbottom">
+          <h4>LAVANYA P</h4>
+          <p>Technical Trainee</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m21" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/21.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>LAVANYA P</p>
+       </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m21')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div onclick="openPopup('m21')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/21.jpg">
+        <div class="cardbottom">
+          <h4>AKSHAYA M</h4>
+          <p>Technical Trainee</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m21" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/21.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>AKSHAYA M</p>
+       </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m21')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<div onclick="openPopup('m22')" class="card a">
+      <div class="content">
+        <img class="poster" src="../static/images/7.jpg">
+        <div class="cardbottom">
+          <h4>Dr.Praveen K Wilson</h4>
+          <p>Asst. Professor</p>
+          <img class="arrow" src="../static/images/arrow.svg";>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="m22" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="id01" class="popcard" >
+          <div class="popcol1" ID="leftdiv"  >
+            <div style="padding-bottom: 100%;"></div> <!-- this keeps the aspect ratio 1:1 and makes the placeholder square -->
+            <img class="popimg column photo" src="../static/images/7.jpg" alt="Placeholder image" >
+          </div>
+          <div class="popcol2" id="rightdiv">
+            
+          <div class="column details">
+              <p><strong>Name:</strong>Dr.Praveen K Wilson</p>
+              <p><strong>DOJ:</strong>  31/05/2019</p>
+              <p><strong>E-Mail ID:</strong>praveenkwilson@cetkr.ac.in</p>
+              <p><strong>Mobile:</strong> +91-9447322541</p>
+  <p><strong>Qualification:</strong>MTech Computer Science & Engineering</p>
+  <p><strong>Professional Experience: </strong> 12 Years</p>
+          </div>
+            <div class="popbtndiv">
+              <button onclick="closePopup('m22')" class="popbtn1" >✖ Back</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+    <!-- modals -->
 
 
 
