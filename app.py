@@ -37,5 +37,10 @@ def Faculty():
 def Students():
     return render_template("students.html")
 
+@app.route("/lab")
+def Lab():
+    return render_template("lab.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

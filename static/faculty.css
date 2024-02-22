@@ -27,7 +27,7 @@ html, body
 {
 overflow-x: hidden;
 }
-body{ background-image: url("images/csewallpaper.jpg");
+body{ background-image: url("images/bg.png");
 background-attachment: fixed;
 position: relative;
 }
@@ -56,12 +56,18 @@ background-repeat: no-repeat, no-repeat,no-repeat;
 background-position:  center top,center bottom,center bottom;
 background-size: contain,contain,contain;
 backdrop-filter: blur(1.5px);
-padding: 5px 100px 0px;
+padding-bottom: 10px;
 
 
 display: flex;
 flex-direction: column;
 justify-content: center;
+
+}
+
+.mainsec img{
+  max-width: 50px;
+  align-self: center;
 }
 
 .hollow{
@@ -82,10 +88,12 @@ animation: typing 2s steps(37) forwards ;
 }
 
 .mainsec h3{
+  font-family: ocra;
+letter-spacing: -1px;
+align-self: center;
+font-size:medium;
+font-weight: 300;
 
-color: transparent;
-  -webkit-text-stroke-width: 0.025px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 .mainsec span{
 font-size: 3.5rem;
@@ -93,7 +101,8 @@ font-size: 3.5rem;
 
 .mainsec .textdiv{
 display: flex;
-  justify-content: center;
+justify-content: center;
+padding: 25px 0 10px;
 }
 
 
@@ -133,7 +142,7 @@ margin: 50px;
 
 .card {
   position: relative;
-  width:500px;
+  width:300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,16 +278,6 @@ animation-iteration-count: infinite;
 animation-direction: alternate;
 }
 
-
-@keyframes rainbow {
-0% {
-  color:#ffffff;
-}
-
-100% {
-  color:#CCF62A;
-}
-}
 /* card */
 
 
@@ -846,6 +845,18 @@ display: none;
   margin: 55px 0 0;
 }
 
+#labBtnContainer{
+  display:flex;
+  width:100%;
+  min-height:50px;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding: 0 7.5%;
+  column-gap: 15px;
+  justify-content: center;
+  margin: 55px 0 0;
+}
+
 .show {
 display: block;
 }
@@ -854,10 +865,10 @@ display: block;
 display: flex;
 
 margin-top: 20px;
-align-items: center;
+align-items: flex-start;
   flex-wrap: wrap;
 margin: 50px;
-  justify-content: center;
+  justify-content: space-between;
   
   
 }
@@ -1079,5 +1090,12 @@ margin:15px 0;
 
 /* Table */
 table {
+  font-family: ocra;
   color: #fff;
+}
+td{
+  font-family: ocra;
+}
+th{
+  text-align: start;
 }

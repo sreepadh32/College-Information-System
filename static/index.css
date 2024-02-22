@@ -1,3 +1,18 @@
+
+@font-face {
+    font-family: twinkle;
+    src: url(images/fonts/twinkle.ttf);
+}
+
+@font-face {
+    font-family: ocra;
+    src: url(images/fonts/OCRAEXT.TTF);
+  }
+@font-face {
+    font-family: racer;
+    src: url(images/fonts/racer.ttf);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,16 +25,22 @@ body, html {
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: rgb(64, 161, 241);
+    background-image: url(../static/images/bg.png);
+    background-attachment: fixed;
 }
 h2 {
     display: block;
     font-size: 1.2em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+   
+    font-family: racer;
+    color: aliceblue;
+    text-shadow: black  4px 4px 15px;
 }
-
+.mainicon{
+    width: 65px;
+}
 
 .grid-container {
     position: absolute;
@@ -38,12 +59,52 @@ h2 {
 
     padding: 20px;
     text-align: center;
-    border: 0.5px solid #000000;
+    
 }
- .spanitem{
+.spanitem {
+    display: flex;
     grid-row-end: span 2;
- }
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
  .center {
     height: 50vh;
+}
+.center h2{
+    font-family: twinkle ;
+    font-size: 2.3rem;
+    color: white;
+}
+
+.cetlogo {
+    max-width: 50px;
+    align-self: center;
+}
+h3.logotext{
+    font-family: ocra;
+    letter-spacing: -0.5px;
+    align-self: center;
+    font-size: medium;
+    font-weight: 300;
+    color: aliceblue;
+    margin: 0px;
+    font-size: 1rem;
+}
+strong{
+    font-size: 3.2rem;
+    margin: 25px 0 35px;
+
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    color: aliceblue;
+    font-family: racer;
+    font-weight: bold;
+    margin-top: -200px;
+    font-size: 1.5rem;
 }
