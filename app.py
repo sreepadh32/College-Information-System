@@ -41,6 +41,11 @@ def Students():
 def Lab():
     return render_template("lab.html")
 
+@app.route("/layout")
+def Layout():
+    return render_template("layout.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

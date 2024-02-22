@@ -169,7 +169,7 @@ margin: 50px;
 
 .card:hover .content {
   box-sizing: content-box;
-  box-shadow: -8px 8px 0 0 #15f4ee; 
+  box-shadow: -8px 8px 0 0 #CCF62A; 
   transform: translate(8px, -8px);
   transition-duration: 0.25s;
 
@@ -799,7 +799,7 @@ box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.31) inset,-3px 3px 2px 2px #4a4a4a;
 }
 
 .popbtn2{
-background-color: #15f4ee; 
+background-color: #cdf62a; 
 color: rgb(0, 0, 0); 
 padding: 10px 20px; 
 border-radius: 5px;
@@ -888,13 +888,13 @@ border: 1px solid rgb(255, 255, 255);
 }
 
 .btn:hover {
-  box-shadow: -5px 5px 3px 3px #15f4ee; 
+  box-shadow: -5px 5px 3px 3px #cdf62a; 
   transform: translate(5px, -5px);
   transition-duration: 0.25s;
 }
 
 .btn.active {
-background-color: #15f4ee; 
+background-color: #cdf62a; 
 color: black;
 box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.31) inset,-3px 3px 1.5px 1.5px rgba(255, 255, 255, 0.25); 
 border: 1px solid rgb(0, 0, 0);
@@ -1052,7 +1052,7 @@ margin:15px 0;
 }
 
 .popbtn2{
-  background-color: #15f4ee; 
+  background-color: #cdf62a; 
   color: rgb(0, 0, 0); 
   padding: 10px 20px; 
   border-radius: 5px;
@@ -1100,34 +1100,5 @@ th{
 }
 
 .layout{
-  max-width: 70%;
-}
-.layoutdiv {
-  margin-top: 50PX;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-.labdiv{width: 600px;
-  margin: 50px auto} 
-
-.labdiv > h3{
-  color: aliceblue;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  text-shadow: #000 4px 4px 10px;
-}
-span.count{
-  font-weight: 300;
-  
-  }
-
-  .backbutton {
-    position: absolute;
-    left: 45px;
-    top: 43px;
-    rotate: 135deg;
-    width: 35px;
+  max-width: 85%;
 }
