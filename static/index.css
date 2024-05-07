@@ -65,7 +65,7 @@ h2 {
     display: flex;
     grid-row-end: span 2;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -79,9 +79,23 @@ h2 {
     color: white;
 }
 
+.rowflex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
 .cetlogo {
-    max-width: 50px;
+    max-width: 100px;
+    padding-bottom: 35px;
     align-self: center;
+    }
+
+.margintoplogo{
+    margin-top: -150px;
 }
 h3.logotext{
     font-family: ocra;

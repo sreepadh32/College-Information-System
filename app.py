@@ -45,7 +45,19 @@ def Lab():
 def Layout():
     return render_template("layout.html")
 
+@app.route("/cse")
+def Cse():
+    return render_template("cse.html")
 
+@app.route("/ece")
+def Ece():
+    return render_template("ece.html")
+@app.route("/eee")
+def Eee():
+    return render_template("eee.html")
+@app.route("/ce")
+def Ce():
+    return render_template("ce.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
