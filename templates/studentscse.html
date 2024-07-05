@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Dept | Students</title>
+      <link rel="stylesheet" href="../static/faculty.css">
+  </head>
+
+  <!--...-->
+  <body>
+    <div class="mainsec">
+        <a href="/"><img class="backbutton" src="../static/images/arrow.svg" alt=""></a>
+      <img src="../static/images/logo.png">
+      <h3>College of Engineering Trikaripur</h3>
+      <div class="textdiv">
+          <!--Glitch-->
+          <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="Students"><span>Students</span></h2>
+         </div>
+          <!--Glitch-->
+      </div>
+      <h3>Department of Computer Science &amp; Engineering</h3>
+    </div>
+
+    <!--Selector-->
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">Show all</button>
+      <button class="btn" onclick="filterSelection('b20')">2k20-24</button>
+      <button class="btn" onclick="filterSelection('b21')">2k21-25</button>
+      <button class="btn" onclick="filterSelection('b22')">2k22-26</button>
+      <button class="btn" onclick="filterSelection('b23')">2k23-27</button>
+      
+    </div>
+        
+    <!--Selector-->
+
+    <!-- cards-->
+
+    <div class="container">
+      
+      <div class="filterDiv b20">
+        <table>
+          <tr>
+              <td>Batch : CS 2K20 A</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2020-21' and student[3] == 'CSA' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+      <div class="filterDiv b20">
+        <table>
+          <tr>
+              <td>Batch : CS 2K20 B</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2020-21' and student[3] == 'CSB' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+      <div class="filterDiv b21">
+        <table>
+          <tr>
+              <td>Batch : CS 2K21 A</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2021-22' and student[3] == 'CSA' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+      <div class="filterDiv b21">
+        <table>
+          <tr>
+              <td>Batch : CS 2K21 B</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2021-22' and student[3] == 'CSB' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+      <div class="filterDiv b22">
+        <table>
+          <tr>
+              <td>Batch : CS 2K22 A</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2022-23' and student[3] == 'CSA' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+      <div class="filterDiv b22">
+        <table>
+          <tr>
+              <td>Batch : CS 2K22 B</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2022-23' and student[3] == 'CSB' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+      <div class="filterDiv b23">
+        <table>
+          <tr>
+              <td>Batch : CS 2K23 A</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2023-24' and student[3] == 'CSA' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+      <div class="filterDiv b23">
+        <table>
+          <tr>
+              <td>Batch : CS 2K23 B</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2023-24' and student[3] == 'CSB' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
+
+
+ <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+  function openPopup(popupId) {
+  document.getElementById(popupId).style.display = "flex";
+}
+
+function closePopup(popupId) {
+  document.getElementById(popupId).style.display = "none";
+}
+
+
+
+
+  </script>
+  
+  </body>
+</html>
+
+

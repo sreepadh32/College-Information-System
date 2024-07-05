@@ -2,10 +2,19 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from flask_mysqldb import MySQL
 import mysql.connector
 
-
-
-
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'
+
+# Connect to MySQL database
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="collegeinfosystem"
+)
+
+# Create a cursor object to interact with the database
+cursor = db.cursor()
 
 
 department = {
@@ -29,13 +38,35 @@ department = {
 def home():
     return render_template("index.html" )
 
+# Login page
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Check if the username and password are valid
+        cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+        user = cursor.fetchone()
+
+        if user:
+            session['user_id'] = user[0]
+            return redirect('/')
+        else:
+            return render_template('login.html', error='Invalid username or password')
+
+    return render_template('login.html')
+
 @app.route("/faculty")
 def Faculty():
     return render_template("faculty.html")
 
 @app.route("/students")
 def Students():
-    return render_template("students.html")
+    # Fetch all students from the database
+    cursor.execute("SELECT * FROM students")
+    students = cursor.fetchall()
+    return render_template('studentscse.html', students=students)
 
 @app.route("/lab")
 def Lab():
