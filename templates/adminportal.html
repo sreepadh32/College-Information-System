@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/loginstyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            background-color: #e7e7e7;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #d7d7d7;
+        }
+    </style>
+</head>
+<body>
+    <a href="/admin"><img style="position: absolute;
+        left: 45px;
+        top: 43px;
+        rotate: 135deg;
+        width: 35px;" src="../static/images/arrow.svg" alt="">
+    </a>
+
+    <a href="/logout">
+       <div style="position: absolute;
+       right: 45px;
+       top: 43px;" > 
+        <img style="width: 25px;" src="../static/images/redx.svg" alt="">
+        {{ user }}
+       </div>
+    </a>
+
+    <div class="glassmorphism-container">
+        <h1>Admin Portal</h1>
+        <a href="/adduser" class="button">Add User</a>
+        <a href="#" class="button">Button 2</a>
+        <a href="#" class="button">Button 3</a>
+        <a href="#" class="button">Button 4</a>
+    </div>
+</body>
+</html>

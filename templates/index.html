@@ -14,7 +14,21 @@
         
         
     </div>
-    <div class="grid-item">3</div>
+    <div class="grid-item">
+    {% if user==0 %}
+        <a href="/login">
+            <h5> 
+                Login
+            </h5>
+        </a>
+    {% else %}
+        <a href="/logout">
+            <h5> 
+                {{ user }}
+            </h5>
+        </a>
+    {% endif %}
+    </div>
     <div class="grid-item spanitem">
         <a href="/layout">
             <img class="mainicon" src="../static/images/icon/location_4315546.png" alt="layout Icon" style="width: 50px;">

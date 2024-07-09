@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/loginstyle.css">
+    <style>
+        * {
+            color: #ccc;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 100px;
+        }
+        .form-input {
+            color: #333;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-checkbox {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            background-color: #e7e7e7;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #d7d7d7;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/admin"><img style="position: absolute;
+        left: 45px;
+        top: 43px;
+        rotate: 135deg;
+        width: 35px;" src="../static/images/arrow.svg" alt="">
+    </a>
+
+    <a href="/logout"><img style="position: absolute;
+        right: 45px;
+        top: 43px;
+        width: 25px;" src="../static/images/redx.svg" alt="">
+        {{ user }}
+    </a>
+
+    <div class="glassmorphism-container">
+        <h1>Add User</h1>
+        <form method="POST" action="/adduser" class="form-container">
+            <label class="form-label" for="username">Username:</label>
+            <input class="form-input" type="text" id="newusername" name="newusername"><br><br>
+            <label class="form-label" for="password">Password:</label>
+            <input class="form-input" type="password" id="newpassword" name="newpassword"><br><br>
+            <label class="form-label" for="isadmin">Is Admin:</label>
+            <input class="form-checkbox" style="display: inline-block;" type="checkbox" id="isadmin" name="isadmin">
+            <br><br>
+            <input class="button" type="submit" value="Add User">
+        </form>
+        <br>
+        <br>
+        {{ message }}
+    </div>
+</body>
+</html>

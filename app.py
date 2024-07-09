@@ -36,37 +36,73 @@ department = {
 
 @app.route("/")
 def home():
-    return render_template("index.html" )
+    return render_template("index.html",user=0 )
 
-# Login page
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      admin portal        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@app.route("/admin")
+def Admin():
+    return render_template("adminportal.html",user=session['user_id'])
+#add user
+@app.route("/adduser", methods=['GET','POST'])
+def AddUser():
+    if request.method == "POST":
+        username= request.form['newusername']
+        password= request.form["newpassword"]
+        is_admin= request.form.get('isadmin')
+        if is_admin:  # If the checkbox is checked, is_admin will be 'on'
+            cursor.execute("INSERT INTO `admins` (`adminid`, `username`, `password`) VALUES (NULL, %s, %s);", (username,password))
+            db.commit()
+            return render_template("adduser.html",message='Added new admin')
+        else:
+            cursor.execute("INSERT INTO `users` (`userid`, `username`, `password`) VALUES (NULL, %s, %s);", (username,password))
+            db.commit()
+            return render_template("adduser.html",message='Added new user')
+    return render_template("adduser.html", user=session['user_id'])
+
+
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      login page        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
 
-        # Check if the username and password are valid
+        # Check if the username and password are valid user
         cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
         user = cursor.fetchone()
+        # Check if the username and password are valid admin
+        cursor.execute("SELECT * FROM admins WHERE username = %s AND password = %s", (username, password))
+        admin = cursor.fetchone()
 
         if user:
             session['user_id'] = user[0]
-            return redirect('/')
+            return render_template("index.html",user=user[1] )
+        elif admin:
+            session['user_id'] = admin[0]
+            return render_template("adminportal.html",user=admin[1] )
         else:
             return render_template('login.html', error='Invalid username or password')
 
     return render_template('login.html')
 
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    return redirect('/')
+
 @app.route("/faculty")
 def Faculty():
     return render_template("faculty.html")
+
 
 @app.route("/students")
 def Students():
     # Fetch all students from the database
     cursor.execute("SELECT * FROM students")
     students = cursor.fetchall()
-    return render_template('studentscse.html', students=students)
+    return render_template('students.html', students=students)
+    
 
 @app.route("/lab")
 def Lab():

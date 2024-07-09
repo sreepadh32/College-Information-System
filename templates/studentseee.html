@@ -3,38 +3,70 @@
   <head>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE Dept | Lab Facilities</title>
+    <title>EEE Dept | Students</title>
       <link rel="stylesheet" href="../static/faculty.css">
   </head>
 
   <!--...-->
   <body>
     <div class="mainsec">
-      <a href="/"><img class="backbutton" style="
-        position: absolute;
-        left: 45px;
-        top: 43px;
-        rotate: 135deg;
-        width: 35px;" src="../static/images/arrow.svg" alt=""></a>
+        <a href="/"><img class="backbutton" src="../static/images/arrow.svg" alt=""></a>
       <img src="../static/images/logo.png">
       <h3>College of Engineering Trikaripur</h3>
       <div class="textdiv">
           <!--Glitch-->
           <div class="hero-container">
-            <h2 class="hero glitch layers" data-text="Layout"><span>Layout</span></h2>
+            <h2 class="hero glitch layers" data-text="Students"><span>Students</span></h2>
          </div>
           <!--Glitch-->
       </div>
-      <h3>Department of Computer Science &amp; Engineering</h3>
+      <h3>Department of Electrical &amp; Electronics Engineering</h3>
     </div>
 
-    <div class="layoutdiv">
-      <img class="layout" src="../static/images/grounddept.svg.jpg.png" alt="">
-      <img class="layout" src="../static/images/firstfloor.svg.jpg.png" alt="">
+    <!--Selector-->
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">Show all</button>
+      <button class="btn" onclick="filterSelection('b20')">2k20-24</button>
+      <button class="btn" onclick="filterSelection('b21')">2k21-25</button>
+      <button class="btn" onclick="filterSelection('b22')">2k22-26</button>
+      <button class="btn" onclick="filterSelection('b23')">2k23-27</button>
       
     </div>
-    
+        
+    <!--Selector-->
 
+    <!-- cards-->
+
+    <div class="container">
+      
+      <div class="filterDiv b20">
+        <table>
+          <tr>
+              <td>Batch : CS 2K20 A</td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>University RegNo</th>
+          </tr>
+          {% set slno = namespace(value=1) %}
+          {% for student in students%}
+          {% if student[2] == '2020-21' and student[3] == 'CSA' %}
+          
+          <tr>
+            <td>{{ slno.value }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[0] }}</td>
+          </tr>
+          {% set slno.value = slno.value + 1 %}
+          {% endif %}
+          {% endfor %}
+      </table>
+        <br><br><br><br><br><br>
+      </div>
 
 
  <script>
