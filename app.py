@@ -1,3 +1,4 @@
+from email import message
 from flask import Flask, render_template, request, redirect, session, url_for
 from flask_mysqldb import MySQL
 import mysql.connector
@@ -16,7 +17,7 @@ db = mysql.connector.connect(
 # Create a cursor object to interact with the database
 cursor = db.cursor()
 
-
+studentdelmsg=""
 department = {
     "name": "Computer Science Department",
     "description": "The Computer Science Department is dedicated to the advancement of knowledge in the field of computer science and its applications.",
@@ -98,6 +99,27 @@ def AddStudent():
             return render_template("addstudent.html", message='Student added successfully')
     return render_template("addstudent.html")
 
+@app.route("/deletestudent", methods=['GET', 'POST'])
+def deleteStudent():
+    if request.method == "POST":
+        university_id = request.form['university_id']
+        cursor.execute("SELECT * FROM students WHERE uniID= %s;", (university_id,))
+        student = cursor.fetchall()
+
+        if student:
+            return render_template("deletestudent.html", students=student)
+        else:
+            return render_template("deletestudent.html", message='NO student found')
+    elif request.method == "GET":
+        message = request.args.get("message")
+        return render_template("deletestudent.html", message=message)
+    return render_template("deletestudent.html") 
+@app.route("/delstud/<uid>")
+def DelStud(uid):
+    cursor.execute("DELETE FROM students WHERE uniID = %s;", (uid,))
+    db.commit()
+    return redirect(url_for("deleteStudent", message="Student Deletion Succesfull"))
+
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      login page        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -132,7 +154,7 @@ def logout():
 def Faculty():
     return render_template("faculty.html")
 
-
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      students pages        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route("/students")
 def Students():
     # Fetch all students from the database
@@ -146,7 +168,27 @@ def StudentsCSE():
     cursor.execute("SELECT * FROM students  WHERE dept LIKE '%CS%' ORDER BY uniID;")
     students = cursor.fetchall()
     return render_template('studentscse.html', students=students)
-    
+
+@app.route("/studentsece")
+def StudentsECE():
+    # Fetch all students from the database
+    cursor.execute("SELECT * FROM students  WHERE dept LIKE 'ECE' ORDER BY uniID;")
+    students = cursor.fetchall()
+    return render_template('studentsece.html', students=students)
+
+@app.route("/studentsce")
+def StudentsCE():
+    # Fetch all students from the database
+    cursor.execute("SELECT * FROM students  WHERE dept LIKE 'CE' ORDER BY uniID;")
+    students = cursor.fetchall()
+    return render_template('studentsce.html', students=students)
+
+@app.route("/studentseee")
+def StudentsEEE():
+    # Fetch all students from the database
+    cursor.execute("SELECT * FROM students  WHERE dept LIKE 'EEE' ORDER BY uniID;")
+    students = cursor.fetchall()
+    return render_template('studentseee.html', students=students)
 
 @app.route("/lab")
 def Lab():
@@ -155,6 +197,10 @@ def Lab():
 @app.route("/layout")
 def Layout():
     return render_template("layout.html")
+
+@app.route("/clglayout")
+def CLGLayout():
+    return render_template("clglayout.html")
 
 @app.route("/cse")
 def Cse():

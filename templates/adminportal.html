@@ -47,11 +47,16 @@
     </a>
 
     <a href="/logout">
-       <div style="position: absolute;
+       <div style="position: absolute; display: flex; flex-direction: row;
        right: 45px;
+       font-family: ocra;
+       font-size: 20px;
+       color: white;
        top: 43px;" > 
         <img style="width: 25px;" src="../static/images/redx.svg" alt="">
-        {{ user }}
+        {% if user %}
+        <h5>{{ user }}</h5>
+        {% endif %}
        </div>
     </a>
 
@@ -60,7 +65,9 @@
         <a href="/adduser" class="button">Add User</a>
         <a href="/deleteuser" class="button">Delete User</a>
         <a href="/addstudent" class="button">Add Student</a>
-        <a href="#" class="button">Button 4</a>
+        <a href="/deletestudent " class="button">Delete Student</a>
+        <a href="/deletestudent " class="button">Add Faculty</a>
+        <a href="/deletestudent " class="button">Remove Faculty</a>
     </div>
 </body>
 </html>

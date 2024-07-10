@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="../static/index.css">
+    
+    <style>
+        * {
+            color: #ccc;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 100px;
+        }
+        .form-input {
+            color: #333;
+            width: 100%;
+            padding: 10px;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-checkbox {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            color: #333;
+            border: 1px solid #ccc;
+            background-color: #e7e7e7;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #d7d7d7;
+        }
+
+        .glassmorphism-container {
+    max-width: px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+    </style>
+</head>
+<body >
+
+    <a href="/admin"><img style="position: absolute;
+        left: 45px;
+        top: 43px;
+        rotate: 135deg;
+        width: 35px;" src="../static/images/arrow.svg" alt="">
+    </a>
+    <div style="display: flex;
+    flex-direction: column;">
+    <h1> Delete Student</h1>
+    <form action="" method="post">
+        <label class=""form-label for="university_id">Enter University ID:</label>
+        <input class="form-input" type="text" id="university_id" name="university_id" required>
+        <input class="button" type="submit" value="Find Student">
+    </form>
+    {% if message %}
+    <br>
+    <br>
+    <p style="color: red;">{{message}}</p>
+    {% endif %}
+    {% if students %}
+    </div>
+    <div class="glassmorphism-container">
+        <table style="width: 800px;" border="2px" >
+            <tr>
+              <th>University ID</th>
+              <th>Name</th>
+              <th>Delete</th>
+            </tr>
+            {% for student in students%}
+            <tr>
+              <td> {{ student[0] }}</td>
+              <td>{{ student[1] }}</td>
+              <td><a style="color: red;" href="/delstud/{{ student[0] }}">Delete Student</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+</body>
+</html>

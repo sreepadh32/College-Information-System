@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science & Engineering Department Information System</title>
     <link rel="stylesheet" href="../static/index.css">
+    <style>
+        .loginbtn{
+            padding-top: 20px;
+            color: aliceblue; 
+            font-family:ocra; 
+            font-size: 20px;
+            margin-bottom: -50px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,9 +23,9 @@
         
         
     </div>
-    <div class="grid-item">
+    <div class="grid-item" style="margin-top: 35px;">
     {% if user==0 %}
-        <a href="/login">
+        <a href="/login" class="loginbtn" style="color: aliceblue; font-family:ocra; margin-top: auto;">
             <h5> 
                 Login
             </h5>
@@ -30,7 +39,7 @@
     {% endif %}
     </div>
     <div class="grid-item spanitem">
-        <a href="/layout">
+        <a href="/clglayout">
             <img class="mainicon" src="../static/images/icon/location_4315546.png" alt="layout Icon" style="width: 50px;">
         <h2>
             Layout

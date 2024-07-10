@@ -43,7 +43,7 @@
       <div class="filterDiv b20">
         <table>
           <tr>
-              <td>Batch : CS 2K20 A</td>
+              <td>Batch : CE 2K20 </td>
               <td></td>
               <td></td>
           </tr>
@@ -54,7 +54,7 @@
           </tr>
           {% set slno = namespace(value=1) %}
           {% for student in students%}
-          {% if student[2] == '2020-21' and student[3] == 'CSA' %}
+          {% if student[2] == '2020-21' and student[3] == 'CE' %}
           
           <tr>
             <td>{{ slno.value }}</td>
