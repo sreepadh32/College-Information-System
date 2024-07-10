@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add User</title>
     <link rel="stylesheet" href="../static/index.css">
-    <link rel="stylesheet" href="../static/loginstyle.css">
+    
     <style>
         * {
             color: #ccc;
@@ -63,6 +63,16 @@
         .button:hover {
             background-color: #d7d7d7;
         }
+
+        .glassmorphism-container {
+    max-width: px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
     </style>
 </head>
 <body>
@@ -74,21 +84,36 @@
         width: 35px;" src="../static/images/arrow.svg" alt="">
     </a>
 
+
     <div class="glassmorphism-container">
-        <h1>Add User</h1>
-        <form method="POST" action="/adduser" class="form-container">
-            <label class="form-label" for="username">Username:</label>
-            <input class="form-input" type="text" id="newusername" name="newusername"><br><br>
-            <label class="form-label" for="password">Password:</label>
-            <input class="form-input" type="password" id="newpassword" name="newpassword"><br><br>
-            <label class="form-label" for="isadmin">Is Admin:</label>
-            <input class="form-checkbox" style="display: inline-block;" type="checkbox" id="isadmin" name="isadmin">
-            <br><br>
-            <input class="button" type="submit" value="Add User">
-        </form>
-        <br>
-        <br>
-        {{ message }}
+        <h1> Delete Users</h1>
+        <table style="width: 800px;" border="2px" >
+            <tr>
+              <th>Sl No</th>
+              <th>Name</th>
+              <th>Delete</th>
+            </tr>
+            {% set slno = namespace(value=1) %}
+            {% for admin in admins%}
+            
+            <tr>
+              <td>admin {{ slno.value }}</td>
+              <td>{{ admin[1] }}</td>
+              <td><a style="color: red;" href="/deladmin/{{ admin[0] }}">Delete Admin</a></td>
+            </tr>
+            {% set slno.value = slno.value + 1 %}
+            {% endfor %}
+            {% set slno = namespace(value=1) %}
+            {% for user in users%}
+            
+            <tr>
+              <td>user {{ slno.value }}</td>
+              <td>{{ user[1] }}</td>
+              <td><a style="color: red;" href="/deluser/{{ user[0] }}">Delete User</a></td>
+            </tr>
+            {% set slno.value = slno.value + 1 %}
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>

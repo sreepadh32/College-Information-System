@@ -57,9 +57,46 @@ def AddUser():
             cursor.execute("INSERT INTO `users` (`userid`, `username`, `password`) VALUES (NULL, %s, %s);", (username,password))
             db.commit()
             return render_template("adduser.html",message='Added new user')
-    return render_template("adduser.html", user=session['user_id'])
+    return render_template("adduser.html")
 
+@app.route("/deleteuser")
+def DeleteUser():
+    cursor.execute("SELECT * FROM users")
+    users = cursor.fetchall()
+    cursor.execute("SELECT * FROM admins")
+    admins = cursor.fetchall()
+    return render_template("deleteuser.html", users=users, admins=admins)
 
+@app.route("/deluser/<uid>")
+def DelUser(uid):
+    cursor.execute("DELETE FROM users WHERE userid= %s;", (uid,))
+    db.commit()
+    return redirect("/deleteuser")
+
+@app.route("/deladmin/<uid>")
+def DelAdmin(uid):
+    cursor.execute("DELETE FROM admins WHERE adminid = %s;", (uid,))
+    db.commit()
+    return redirect("/deleteuser")
+
+@app.route("/addstudent", methods=['GET', 'POST'])
+def AddStudent():
+    if request.method == "POST":
+        university_id = request.form['university_id']
+        name = request.form['name']
+        batch = request.form['batch']
+        department = request.form['department']
+
+        cursor.execute("SELECT * FROM students WHERE uniID= %s;", (university_id,))
+        student = cursor.fetchone()
+
+        if student:
+            return render_template("addstudent.html", errmessage="Error: Student already exists")
+        else:
+            cursor.execute("INSERT INTO `students` (`uniID`, `name`, `batch`, `dept`) VALUES (%s,%s,%s,%s);", (university_id,name,batch,department))
+            db.commit()
+            return render_template("addstudent.html", message='Student added successfully')
+    return render_template("addstudent.html")
 
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      login page        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route('/login', methods=['GET', 'POST'])
@@ -102,6 +139,13 @@ def Students():
     cursor.execute("SELECT * FROM students")
     students = cursor.fetchall()
     return render_template('students.html', students=students)
+
+@app.route("/studentscse")
+def StudentsCSE():
+    # Fetch all students from the database
+    cursor.execute("SELECT * FROM students  WHERE dept LIKE '%CS%' ORDER BY uniID;")
+    students = cursor.fetchall()
+    return render_template('studentscse.html', students=students)
     
 
 @app.route("/lab")
