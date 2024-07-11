@@ -120,6 +120,51 @@ def DelStud(uid):
     db.commit()
     return redirect(url_for("deleteStudent", message="Student Deletion Succesfull"))
 
+
+@app.route("/addfaculty", methods=['GET', 'POST'])
+def AddFaculty():
+    if request.method == "POST":
+        name = request.form['name']
+        department = request.form['department']
+        doj = request.form['doj']
+        email = request.form['email']
+        mobile = request.form['mobile']
+        qualification = request.form['qualification']
+        experience = request.form['experience']
+        intrest = request.form['intrest']
+        desig = request.form['desig']
+
+        cursor.execute("SELECT * FROM faculties WHERE name= %s;", (name,))
+        student = cursor.fetchone()
+
+        if student:
+            return render_template("addfaculty.html", errmessage="Error: Faculty already exists")
+        else:
+            cursor.execute("INSERT INTO `faculties` ( `name`, `department`, `doj`, `mailid`, `mobile`, `qualification`, `experience`, `intrest`, `designation`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)", (name,department,doj,email,mobile,qualification,experience,intrest,desig))
+            db.commit()
+            return render_template("addfaculty.html", message='Faculty added successfully')
+    return render_template("addfaculty.html")
+
+@app.route("/deletefaculty", methods=['GET', 'POST'])
+def deleteFaculty():
+    if request.method == "POST":
+        dept = request.form['department']
+        cursor.execute("SELECT * FROM faculties WHERE department LIKE %s ORDER BY facultyID;", ('%'+dept+'%',))
+        faculty = cursor.fetchall()
+        if faculty:
+            return render_template("deletefaculty.html", faculties=faculty)
+        else:
+            return render_template("deletefaculty.html", message='NO Faculty found')
+    elif request.method == "GET":
+        message = request.args.get("message")
+        return render_template("deletefaculty.html", message=message)
+    return render_template("deletefaculty.html") 
+@app.route("/delfacul/<uid>")
+def DelFacul(uid):
+    cursor.execute("DELETE FROM faculties WHERE facultyID = %s;", (uid,))
+    db.commit()
+    return redirect(url_for("deleteFaculty", message="Faculty Deletion Succesfull"))
+
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      login page        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -149,11 +194,36 @@ def login():
 def logout():
     session.pop('user_id', None)
     return redirect('/')
-
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      faculties pages        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route("/faculty")
 def Faculty():
-    return render_template("faculty.html")
+    cursor.execute("SELECT * FROM faculties ORDER BY facultyID;")
+    faculties = cursor.fetchall()
+    return render_template("faculty.html", faculties=faculties)
 
+@app.route("/facultycse")
+def FacultyCSE():
+    cursor.execute("SELECT * FROM faculties WHERE department LIKE %s ORDER BY facultyID;", ('%CSE%',))
+    faculties = cursor.fetchall()
+    return render_template("facultycse.html", faculties=faculties)
+
+@app.route("/facultyce")
+def FacultyCE():
+    cursor.execute("SELECT * FROM faculties WHERE department LIKE %s ORDER BY facultyID;", ('CE',))
+    faculties = cursor.fetchall()
+    return render_template("facultyce.html", faculties=faculties)
+
+@app.route("/facultyece")
+def FacultyECE():
+    cursor.execute("SELECT * FROM faculties WHERE department LIKE %s ORDER BY facultyID;", ('%ECE%',))
+    faculties = cursor.fetchall()
+    return render_template("facultyece.html", faculties=faculties)
+
+@app.route("/facultyeee")
+def FacultyEEE():
+    cursor.execute("SELECT * FROM faculties WHERE department LIKE %s ORDER BY facultyID;", ('%EEE%',))
+    faculties = cursor.fetchall()
+    return render_template("facultyeee.html", faculties=faculties)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      students pages        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @app.route("/students")
 def Students():
@@ -165,7 +235,7 @@ def Students():
 @app.route("/studentscse")
 def StudentsCSE():
     # Fetch all students from the database
-    cursor.execute("SELECT * FROM students  WHERE dept LIKE '%CS%' ORDER BY uniID;")
+    cursor.execute("SELECT * FROM students  WHERE dept LIKE %s ORDER BY uniID;", ('%CS%',))
     students = cursor.fetchall()
     return render_template('studentscse.html', students=students)
 
